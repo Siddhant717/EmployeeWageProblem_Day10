@@ -11,11 +11,11 @@ namespace EmployeeWageProblem
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
 
-        private String company;
+        private string company;
         private int empRatePerHr;
         private int NumberOfWorkingDays;
         private int MaxHoursPerMonth;
-        private int totalempWage;
+        
 
         public EmpWage(string company, int empRatePerHr, int numberOfWorkingDays, int maxHoursPerMonth)
         {
@@ -51,10 +51,16 @@ namespace EmployeeWageProblem
 
                 }
                 totalEmpHours += empHrs;
-
+               
                 totalEmpWage = totalEmpHours * this.empRatePerHr;
+
             }
-            Console.WriteLine("total employee wage is of company" + this.company + "is " + totalEmpWage);
+           
+            Console.WriteLine("Total Emp Wage for Company " + company + "is " + totalEmpWage);
+
+            
         }
+
+       
     }
 }
